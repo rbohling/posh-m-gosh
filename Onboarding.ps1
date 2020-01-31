@@ -27,7 +27,7 @@ function Send-WelcomeEmail {
         <p>Please make sure that the following information is provided to your new hire. If you have any questions, please do not hesitate to contact IT.</p>
         <p>&nbsp;</p>
         <p>Dear $UserDisplayName,</p>
-        <p>Welcome to CCI. Please find your IT credentials and information below.</p>
+        <p>Welcome to . Please find your IT credentials and information below.</p>
         <p><strong>Windows AD Username:</strong> $UsersaMAccountName<br /><strong>O365 Username and Email Address:</strong> $UserEmailAddress<br /><strong>Password:</strong> $UserPassword<br /><br /><strong>To change your password:</strong><br />1. Logon to your computer.<br />2. Press CTRL + ALT + DEL and click Change Password.</p>
         <p><strong>Information:</strong><br />1. Your windows account is synchronized to Office 365. If you change your windows password, it will automatically be replicated to Azure AD/Office 365.<br />2. To access the Office 365 portal, go to https://portal.office.com<br />3. Once you login to Office 365, you will be asked to add your mobile or alternative email address for Multi Factor Authentication. We recommend that you download the Microsoft Authenticator app (alternatively Google Authenticator will work) and set it up for push MFA requests. To do this, follow the instructions at the link below:<br /><br /><a href="https://docs.microsoft.com/en-us/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to</a></p>
         <p><strong>Support:</strong><br />If you have any questions or concerns, please lodge a support ticket at <a href="mailto:servicedesk@company.com">servicedesk@company.com</a>.</p>
@@ -58,7 +58,7 @@ function Send-WelcomeEmail {
 }
 
 # Misc Variables
-$Company = "Contract Callers Inc."
+$Company = ""
 $AADServer = "auoolmgmt01.company.com"
 $Domain = "cci.local"
 $SPList = "https://company.sharepoint.com/corporate/hr"
