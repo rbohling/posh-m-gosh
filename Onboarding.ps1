@@ -49,11 +49,20 @@ function Send-WelcomeEmail {
         $MailMessage = @{
             From = $Sender
             To = $Recipient
-            Body = $MessageBody
-            SmtpServer = "smtp.company.com"
-            Subject = "$UserDisplayName Login Credentials "
             CC = $CC
+            #$Attachment = "C:\users\Username\Documents\SomeTextFile.txt" if an attachment is wanted
+            Body = $MessageBody
+            Subject = "$UserDisplayName Login Credentials "
+            SmtpServer = "smtp.company.com"
+            SmtpPort = "587"
+            #username = "this would be the email address you are using to send notification"
+            #password = ConvertTo-SecureString "insert password here" -AsPlainText -Force ( this would be the password for the email address so email sends)
+            
+            
+            
+            
         }
+        #$psCred = New-Object System.Management.Automation.PSCredential -ArgumentList ($username, $password) variable to automate credential input without user input so email sends
         Send-MailMessage @MailMessage -BodyAsHtml
 }
 
